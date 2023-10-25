@@ -15,6 +15,14 @@ def encode(password):
             encoded_password += str(new)
         return encoded_password
 
+def decode(encoded_password):
+    decoded_password = ""
+    for digit in encoded_password:
+        new = (int(digit) - 3) % 10
+        decoded_password += str(new)
+    return decoded_password
+
+
 
 def main():
 
